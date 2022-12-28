@@ -1,0 +1,13 @@
+<template>
+  <div class="slds-card slds-p-around_medium">
+    <c-filtering-combobox
+      label="Your favorite animal"
+      options={options}
+      onchange={handleValueChange}
+      required={isRequired}
+      disabled={isDisabled}
+      value={selectedValue}
+    ></c-filtering-combobox>
+    <p class="slds-m-top_small">Your favorite animal is... {selectedValue}</p>
+  </div>
+</template>

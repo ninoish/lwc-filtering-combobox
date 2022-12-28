@@ -1,0 +1,33 @@
+<template>
+  <div class="fc-wrapper slds-combobox_container">
+    <div class={fcOptionsClass}>
+      <lightning-input
+        type="text"
+        label={label}
+        autocomplete="off"
+        onchange={handleInputChange}
+        placeholder={placeholder}
+        value={inputValue}
+        variant={variant}
+        required={required}
+        onfocus={handleInputFocus}
+        onblur={handleInputBlur}
+        disabled={disabled}
+      ></lightning-input>
+      <ul
+        class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-dropdown_left"
+      >
+        <template for:each={filteredOptions} for:item="o">
+          <li
+            key={o.value}
+            data-option-value={o.value}
+            onclick={handleOptionClick}
+            class="slds-media slds-listbox__option slds-media_center slds-media_small slds-listbox__option_plain"
+          >
+            {o.label}
+          </li>
+        </template>
+      </ul>
+    </div>
+  </div>
+</template>
