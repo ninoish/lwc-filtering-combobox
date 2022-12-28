@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/5856192/209766215-eaa0785e-2e7c-413a-9
 
 ### @apis
 - label
-- options : Array of objects. The format is `[{ label: "required", alias: "required", value: "required"}]`
+- options : Array of objects. The format is `[{ label: "required", alias: "optional", value: "required"}]`
   - label : Displayed on UI
   - alias : Not displayed but reacts to the input value for filtering.
   - value : Return value
